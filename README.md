@@ -2,17 +2,18 @@
 
 ## Usage
 
-`yarn && yarn start`
+- `yarn && yarn start`
+- Go to http://localhost:4000
+- A WebSocket connection will be established
+- Play with `window.socket` in browser
 
 ## Links:
 
-RFC: https://tools.ietf.org/html/rfc6455
-WebSockets API on MDN: https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
+[RFC](https://tools.ietf.org/html/rfc6455) | [WebSockets API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
 
-`ws`: https://github.com/websockets/ws
+[Armin Ronacher](http://lucumr.pocoo.org/2012/9/24/websockets-101/) | [Popular Medium Article]( https://blog.sessionstack.com/how-javascript-works-deep-dive-into-websockets-and-http-2-with-sse-how-to-pick-the-right-path-584e6b8e3bf7)
 
-Armin Ronacher: http://lucumr.pocoo.org/2012/9/24/websockets-101/
-Popular Medium Article: https://blog.sessionstack.com/how-javascript-works-deep-dive-into-websockets-and-http-2-with-sse-how-to-pick-the-right-path-584e6b8e3bf7
+[`websockets/ws`](https://github.com/websockets/ws) | [`websockets/ws API`](https://github.com/websockets/ws/blob/master/doc/ws.md)
 
 ## Notes
 
