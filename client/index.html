@@ -1,0 +1,13 @@
+<div>WebSockets Fun</div>
+
+<script>
+const socket = new WebSocket('ws://localhost:4000')
+socket.onopen = (ev) => {
+  console.log('connection established')
+}
+socket.onmessage = (ev) => {
+  console.log(`received message: ${ev.data}`)
+}
+
+window.socket = socket
+</script>
