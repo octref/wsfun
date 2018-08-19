@@ -2,10 +2,10 @@
 
 ## Usage
 
-- `yarn && yarn start`
-- Go to http://localhost:4000
-- A WebSocket connection will be established
-- Play with `window.socket` in browser
+- `yarn`
+- Run Node Server: `yarn server`
+- Run Node Client: `yarn client`
+- Run Browser Client: Go to http://localhost:4000 and play with `window.socket` in browser
 
 ## Links:
 

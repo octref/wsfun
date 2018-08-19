@@ -6,7 +6,7 @@ socket.onopen = (ev) => {
   console.log('connection established')
 }
 socket.onmessage = (ev) => {
-  console.log(`received message: ${ev.data}`)
+  console.log(`<- ${ev.data}`)
 }
 
 window.socket = socket

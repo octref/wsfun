@@ -23,22 +23,18 @@ const server = http.createServer((req, res) => {
 
 const wsServer = new WSServer({ server })
 
-wsServer.on('connection', (conn) => {
+wsServer.on('connection', conn => {
   console.log('connection established')
 
   conn.on('pong', () => {
-    console.log('<- pong from ws-client')
+    console.log('<- pong')
   })
 
-  conn.on('message', (msg) => {
-    console.log(`<- received msg: ${msg}`)
+  conn.on('message', msg => {
+    console.log(`<- ${msg}`)
 
-    console.log(`-> echoing back message ${msg}`)
+    console.log(`-> ${msg}`)
     conn.send(msg)
-
-    if (msg.toString().startsWith('ping')) {
-      conn.ping('ping from ws-server')
-    }
   })
 
   conn.on('close', (code, reason) => {
@@ -50,8 +46,10 @@ server.listen(4000, () => {
   console.log('Listening for ws:// and http:// at localhost:4000')
 })
 
+let count = 0
 setInterval(() => {
-  wsServer.clients.forEach((wsConn) => {
-    wsConn.ping()
+  wsServer.clients.forEach(conn => {
+    console.log(`-> heartbeat ping ${count++}`)
+    conn.ping()
   })
-}, 5000)
+}, 10000)

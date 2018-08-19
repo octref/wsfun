@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "ts-node index.ts"
+    "server": "ts-node server.ts",
+    "client": "ts-node client.ts"
   },
   "dependencies": {
     "ws": "^6.0.0"
